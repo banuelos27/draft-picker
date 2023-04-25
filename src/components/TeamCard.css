@@ -1,0 +1,19 @@
+.card {
+   margin-bottom: 1em;
+   box-shadow: 10px 10px lightblue;
+   cursor: pointer;
+}
+.card:hover {
+   background-color: #C1E3ED;
+}
+.card-header {
+   background-color: #F06292;
+   color: #ffffff;
+   font-weight: bold;
+}
+#card-header-span-player {
+   float: right;
+}
+#card-sub-header-span-player-search {
+   float: right;
+}
