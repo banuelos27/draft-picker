@@ -59,6 +59,7 @@ const draftInfo = {
       "NYG",
       "DAL",
       "BUF",
+      "CHI",
       "CIN",
       "PHI",
       "KC"

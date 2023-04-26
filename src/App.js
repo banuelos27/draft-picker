@@ -7,27 +7,26 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import teamsInfo from './data/teams';
+import noahTeamsInfo from './data/noahTeams';
 import playersInfo from './data/players';
 import draftInfo from './data/draftOrder';
 import { useEffect, useState } from 'react';
 
-const App = () => {
+
+const App = ({ user }) => {
   const [teams, setTeams] = useState([]);
   const [players, setPlayers] = useState([]);
   const [draftOrder, setDraftOrder] = useState([]);
-  //const [selectedPlayer, setSelectedPlayer] = useState(null);
-  //const [selectedTeam, setSelectedTeam] = useState(null);
-  //const [draftIndex, setDraftIndex] = useState(0);
 
   let draftedIndex = 0;
   let selectedTeam = null;
   let selectedPlayer = null;
 
   useEffect(() => {
-    setTeams(teamsInfo.teamsData);
+    user === "jose" ? setTeams(teamsInfo.teamsData) : setTeams(noahTeamsInfo.teamsData);
     setPlayers(playersInfo.playerData)
     setDraftOrder(draftInfo.draftOrder);
-  }, []);
+  }, [user]);
 
   const onSelectTeam = (teamName, draftIndex) => {
     const currentTeam = teams.find(t => t.name === teamName) ;
@@ -67,7 +66,6 @@ const App = () => {
         });
       }
     }
-    console.log("playersDraftedArr: ", playersDraftedArr);
     setTeams(teams.map(t => {
       return t.name !== selectedTeam.name ? t : {...t, playersDrafted: playersDraftedArr}
     }))
@@ -108,36 +106,36 @@ const App = () => {
 
   return (
     <Container>
-      <Row xs={1} md={2}>
-        <Col>
-          <h3>Draft Order</h3>
-          <CardList 
-            teams={teams} 
-            draftOrder={draftOrder} 
-            players={players}
-            onSelectPlayer={onSelectPlayer}
-            onSavePlayer={onSavePlayer}
-            onSelectTeam={onSelectTeam}
-          />
-          <Button 
-            id="teams-export-btn" 
-            variant="primary" 
-            size="lg"
-            onClick={exportToJson}
-          >Export Teams JSON</Button>
-        </Col>
-        <Col>
-          <h3>Best Available Players</h3>
-          <BestAvailableTable players={players} />
-          <Button 
-            id="players-export-btn" 
-            variant="primary" 
-            size="lg"
-            onClick={exportToJson}
-          >Export Players JSON</Button>
-        </Col>
-      </Row>
-    </Container>
+    <Row xs={1} md={2}>
+      <Col>
+        <h3>Draft Order</h3>
+        <CardList 
+          teams={teams} 
+          draftOrder={draftOrder} 
+          players={players}
+          onSelectPlayer={onSelectPlayer}
+          onSavePlayer={onSavePlayer}
+          onSelectTeam={onSelectTeam}
+        />
+        <Button 
+          id="teams-export-btn" 
+          variant="primary" 
+          size="lg"
+          onClick={exportToJson}
+        >Export Teams JSON</Button>
+      </Col>
+      <Col>
+        <h3>Best Available Players</h3>
+        <BestAvailableTable players={players} />
+        <Button 
+          id="players-export-btn" 
+          variant="primary" 
+          size="lg"
+          onClick={exportToJson}
+        >Export Players JSON</Button>
+      </Col>
+    </Row>
+  </Container> 
   );
 }
 

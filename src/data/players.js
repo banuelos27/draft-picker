@@ -689,7 +689,7 @@ const playersInfo = {
          "grade": 75
       },
       {
-         "name": "Kendre Milelr",
+         "name": "Kendre Miller",
          "rank": 87,
          "school": "TCU",
          "position": "RB",
@@ -697,12 +697,12 @@ const playersInfo = {
          "grade": 74
       },
       {
-         "name": "A.T. Perry",
+         "name": "Jerrod Clark",
          "rank": 88,
-         "school": "Wake Forest",
-         "position": "WR",
-         "positionRank": 14,
-         "grade": 74
+         "school": "Coastal Carolina",
+         "position": "DT",
+         "positionRank": 17,
+         "grade": 47
       },
       {
          "name": "Luke Wypler",
@@ -729,12 +729,12 @@ const playersInfo = {
          "grade": 74
       },
       {
-         "name": "Jaelyn Duncan",
+         "name": "Kenny McIntosh",
          "rank": 92,
-         "school": "Maryland",
-         "position": "OT",
-         "positionRank": 11,
-         "grade": 74
+         "school": "Georgia",
+         "position": "RB",
+         "positionRank": 16,
+         "grade": 47
       },
       {
          "name": "Jaquelin Roy",
@@ -777,12 +777,12 @@ const playersInfo = {
          "grade": 72
       },
       {
-         "name": "Antonio Johnson",
+         "name": "Mekhi Blackmon",
          "rank": 98,
-         "school": "Texas A&M",
-         "position": "S",
-         "positionRank": 6,
-         "grade": 72
+         "school": "USC",
+         "position": "CB",
+         "positionRank": 30,
+         "grade": 44
       },
       {
          "name": "Tuli Tuipulotu",
@@ -873,12 +873,12 @@ const playersInfo = {
          "grade": 69
       },
       {
-         "name": "Olusegun Oluwatimi",
+         "name": "Antonio Mafi",
          "rank": 110,
-         "school": "Michigan",
-         "position": "C",
-         "positionRank": 5,
-         "grade": 69
+         "school": "UCLA",
+         "position": "OG",
+         "positionRank": 10,
+         "grade": 46
       },
       {
          "name": "Nick Herbig",

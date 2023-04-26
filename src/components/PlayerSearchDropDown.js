@@ -6,7 +6,7 @@ import Form from 'react-bootstrap/Form';
 // Dropdown needs access to the DOM node in order to position the Menu
 const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
    <a
-      href=""
+      href="/"
       ref={ref}
       onClick={(e) => {
          e.preventDefault();
@@ -50,14 +50,11 @@ const CustomMenu = React.forwardRef(
 );
 
 const PlayerSearchDropDown = ({ players, onSelectPlayer, setPlayerInModal }) => {
-   const [draftedPlayer, setDraftedPlayer] = useState({});
-
    let counter = 0;
 
    const setDraftPick = (e) => {
       e.preventDefault();
       const thePlayer = players.find(p => p.name === e.target.innerText);
-      //setDraftedPlayer(thePlayer)
       setPlayerInModal(thePlayer.name);
       onSelectPlayer(thePlayer);
    }
@@ -68,7 +65,6 @@ const PlayerSearchDropDown = ({ players, onSelectPlayer, setPlayerInModal }) => 
          eventKey={counter} 
          key={player.name}
          onClick={ (e) => setDraftPick(e) }
-         active={player.name === draftedPlayer.name}
       >
          {player.name}
       </Dropdown.Item>

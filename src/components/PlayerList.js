@@ -2,8 +2,11 @@ import PlayerCard from './PlayerCard';
 import Accordion from 'react-bootstrap/Accordion';
 
 const PlayerList = ({ players }) => {
+   let count = 0;
+
    const playerCardList = players.map((player) => {
-      return <PlayerCard player={player} key={player.name} />
+      count++;
+      return <PlayerCard player={player} key={`_${count}_${player.name}`} />
    });
 
    return (
