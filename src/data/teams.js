@@ -132,7 +132,7 @@ const teamsInfo = {
           {
             "playerName": "Ji'Ayir Brown",
             "position": "S",
-            "pickIndex": 61
+            "pickIndex": 60
           }
         ],
         "teamNeeds": [
@@ -156,7 +156,7 @@ const teamsInfo = {
           {
             "playerName": "Antonio Johnson",
             "position": "S",
-            "pickIndex": 60
+            "pickIndex": 61
           }
         ],
         "teamNeeds": [
